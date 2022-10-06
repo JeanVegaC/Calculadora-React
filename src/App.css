@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  user-select: none;
+}
+
+main{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
+
+}
+
+li{
+  list-style: none;
+}
+
+.calculadora{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  width: 300px;
+  
+}
+
+.header{
+  /* border:2px solid #ccc; */
+  margin: 2rem 0;
+}
+
+.teclado{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.teclado li{
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: #a1a1a1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.teclado li:hover{
+  background-color: #ccc;
+}
+
+
+.result{
+  display: flex;
+  /* border: 2px solid #c3c3c3; */
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.result span{
+  display: flex;
+  align-items: center;
+  height: 30px;
+  /* width: 100%; */
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  animation-name: shift;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shift{
+  0%{
+    border: none;
+  }
+  100%{
+    border-right: 2px solid #222;
+  }
+}
