@@ -1,7 +1,7 @@
 import { paste } from '@testing-library/user-event/dist/paste';
 import React, { useState, useEffect } from 'react';
 import { createRef, useRef } from 'react';
-import Header from './header';
+import Footer from './footer';
 
 export default function Calculadora() {
     const [data, setData] = useState(null);
@@ -88,8 +88,8 @@ export default function Calculadora() {
     }, [refData])
 
     return (
+        <>
         <main>
-            <Header />
             <div className='calculadora'>
                 <div className='result'>
                     <span ref={refData}></span>
@@ -114,6 +114,8 @@ export default function Calculadora() {
                 </ul>
             </div>
         </main>
+        <Footer/>
+        </>
 
 
     )
